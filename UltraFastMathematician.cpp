@@ -3,15 +3,16 @@ using namespace std;
 
 void solve()
 {
-    string s;
-    getline(cin, s);
-    unordered_set<char> st;
+    string s, a, ans = "";
+    cin >> s >> a;
     for (int i = 0; i < s.length(); i++)
     {
-        if (s[i] >= 'a' && s[i] <= 'z')
-            st.insert(s[i]);
+        if (s[i] == a[i])
+            ans += '0';
+        else
+            ans += '1';
     }
-    cout << st.size();
+    cout << ans;
 }
 
 int main()

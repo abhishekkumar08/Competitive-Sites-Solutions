@@ -5,19 +5,16 @@ void solve()
 {
     int n;
     cin >> n;
-    if (n % 2 == 1)
+    int i = 1, sum = 0, count = 0;
+    while (sum < n)
     {
-        for (int i = n; i > 0; i--)
-        {
-            if (i != (n / 2) + 1)
-                cout << i << " ";
-        }
-        cout << (n / 2) + 1;
+        sum += i;
+        i++;
+        count++;
     }
-    else
-        for (int i = n; i > 0; i--)
-            cout << i << " ";
-    cout << endl;
+    if ((sum - n) == 1)
+        count++;
+    cout << count << endl;
 }
 
 int main()
