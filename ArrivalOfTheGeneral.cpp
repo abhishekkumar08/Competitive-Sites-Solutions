@@ -4,42 +4,26 @@ void solve()
 {
     int n;
     cin >> n;
-    int arr[n], maxa = 0, mina = INT_MAX, ms = 0, ml = 0;
+    int minindex = 0, minvalue = INT_MAX, maxaindex = 0, maxavalue = 0;
     for (int i = 0; i < n; i++)
     {
-        cin >> arr[i];
-        if (arr[i] > maxa)
+        int x;
+        cin >> x;
+        if (x > maxavalue)
         {
-            ml = i;
-            maxa = arr[i];
+            maxaindex = i;
+            maxavalue = x;
         }
-        if (arr[i] < mina)
+        if (x <= minvalue)
         {
-            ms = i;
-            mina = arr[i];
-        }
-    }
-    cout << maxa << " " << mina << " " << ms << " " << ml << endl;
-    int time = 0;
-    while (1)
-    {
-        if (ml == 0 && ms == n - 1)
-            break;
-        if (ml != 0)
-        {
-            swap(arr[ml], arr[ml - 1]);
-            ml--;
-            time++;
-        }
-        if (ms != (n - 1))
-        {
-
-            swap(arr[ms], arr[ms + 1]);
-            ms++;
-            time++;
+            minindex = i;
+            minvalue = x;
         }
     }
-    cout << time << endl;
+    if (maxaindex > minindex)
+        cout << maxaindex - 1 + n - minindex - 1;
+    else
+        cout << maxaindex - 1 + n - minindex;
 }
 
 int main()

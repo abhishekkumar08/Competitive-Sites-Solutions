@@ -3,23 +3,25 @@ using namespace std;
 
 void solve()
 {
-    string S, str = "";
-    cin >> S;
-    stack<char> s;
-    for (int i = 0; i < S.length(); i++)
+    int n;
+    cin >> n;
+    int arr[n];
+    for (int i = 0; i < n; ++i)
+        cin >> arr[i];
+
+    int k, count = 0;
+    cin >> k;
+
+    for (int i = 0; i < n; ++i)
     {
-        if (!s.empty() && s.top() == S[i])
+        for (int j = i + 1; j < n; ++j)
         {
-            s.pop();
-            str.pop_back();
-        }
-        else
-        {
-            s.push(S[i]);
-            str.push_back(S[i]);
+            int x = (arr[i] & arr[j]);
+            if (x > k)
+                count++;
         }
     }
-    cout << str;
+    cout << count << endl;
 }
 
 int main()
