@@ -5,6 +5,7 @@
     - 144A - Arrival Of The General
     - 690B - Last Year's Substring
     - 101A - Regular Bracket Sequence
+    - 261A - Pashmak and Garden
 
 ## CEIL Function
 
