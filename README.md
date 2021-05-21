@@ -21,7 +21,7 @@ Answer = ceil(m/a) _ ceil(n/a), where ceil(x) is the least integer which is abov
 
 - 101A - Regular Bracket Sequence(A better approach)
 
-```
+```c++
 #include <bits/stdc++.h>
 using namespace std;
 
