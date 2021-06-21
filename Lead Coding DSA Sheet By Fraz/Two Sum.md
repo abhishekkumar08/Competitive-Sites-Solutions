@@ -12,6 +12,10 @@ You can return the answer in any order.
 
 For the efficient approach, we can use a HashMap. In the Hashmap we would find the required element that is `target-nums[i]` and if that element is not there we would store the element in the map as array element as value and its index as key. If found we would return the indices (see the code).
 
+**Time Complexity:** Brute Force: O(n^2) Efficient: O(n)
+
+**Space Complexity:** Brute Force: O(1) Efficient: O(n)
+
 **Code for the efficient approach:**
 
 ```c++
